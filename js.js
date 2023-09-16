@@ -22,11 +22,14 @@ function agregarProducto() {
     productos.push(producto);
 }
 
+
 function mostrarProductos() {
+    let productos2 = "";
     console.log('Lista de productos:');
     productos.forEach((producto, index) => {
-        console.log(`${index + 1}. ${producto.obtenerInformacion()}`);
-    });
+    productos2 +=`${index + 1}.${producto.obtenerInformacion()}\n`
+    })
+    alert(productos2);
 }
 
 function ordenarProductos() {
@@ -45,7 +48,7 @@ while (tof) {
             break;
         case '2':
             mostrarProductos();
-            console.log('Productos mostrados.');
+        
             break;
         case '3':
             ordenarProductos();
@@ -55,7 +58,7 @@ while (tof) {
             console.log('Saliendo del programa.');
             alert('Gracias por usar el programa.');
             tof = false;
-            // Puedes agregar más opciones o funcionalidades aquí si lo deseas.
+         
             break;
         default:
             console.log('Opción no válida. Por favor, seleccione una opción válida.');
