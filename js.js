@@ -34,6 +34,7 @@ function mostrarProductos() {
 
 function ordenarProductos() {
     productos.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    console.log(productos);
 }
 
 while (tof) {
@@ -52,6 +53,7 @@ while (tof) {
             break;
         case '3':
             ordenarProductos();
+            mostrarProductos();
             console.log('Productos ordenados por nombre.');
             break;
         case '4':
